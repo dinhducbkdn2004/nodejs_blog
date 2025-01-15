@@ -20,6 +20,14 @@
   "bugs": {
     "url": "https://github.com/dinhducbkdn2004/nodejs_blog/issues"
   },
+  "lint-staged": {
+    "src/**/*.{js,css,scss,html}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "homepage": "https://github.com/dinhducbkdn2004/nodejs_blog#readme",
   "description": "",
   "dependencies": {
@@ -27,8 +35,11 @@
     "express-handlebars": "^8.0.1"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
     "sass": "^1.83.1"
   }
 }
